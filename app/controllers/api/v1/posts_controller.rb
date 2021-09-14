@@ -2,6 +2,7 @@ module Api
   module V1
     class PostsController < ApplicationController
       before_action :set_post, only: [:show, :update, :destroy]
+      before_action :login_required
 
       def index
         posts = Post.order(created_at: :desc)
