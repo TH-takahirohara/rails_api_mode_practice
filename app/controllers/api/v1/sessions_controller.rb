@@ -13,7 +13,7 @@ module Api
 
       def destroy
         session.delete(:user_id)
-        render json: { status: 'SUCCESS', message: 'Session terminated' }
+        render json: { status: 'SUCCESS', message: 'Session closed' }
       end
     end
   end
